@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-13T00:00:00+05:30",
+  "title": "Design System: CortexAI Operational Workspace",
+  "extensions": {
+    "colorMeta": {
+      "workspace-black": { "role": "neutral", "displayName": "Workspace Black", "canonical": "#11110f", "tonalRamp": ["#11110f", "#252520", "#3d3c34", "#57554a", "#747166", "#969287", "#bbb7ae", "#e8e6df"] },
+      "rail-charcoal": { "role": "neutral", "displayName": "Rail Charcoal", "canonical": "#171714", "tonalRamp": ["#141411", "#292824", "#403f37", "#5a584e", "#777469", "#98958a", "#bdb9b0", "#e9e7e0"] },
+      "surface-charcoal": { "role": "neutral", "displayName": "Surface Charcoal", "canonical": "#1d1d19", "tonalRamp": ["#151512", "#2c2b26", "#444239", "#5d5b50", "#79766b", "#9a978c", "#bebbb2", "#eae8e1"] },
+      "raised-charcoal": { "role": "neutral", "displayName": "Raised Charcoal", "canonical": "#24241f", "tonalRamp": ["#171713", "#302f29", "#48463e", "#615f54", "#7d7a6f", "#9d9a90", "#c1beb5", "#ebe9e3"] },
+      "hover-charcoal": { "role": "neutral", "displayName": "Hover Charcoal", "canonical": "#292923", "tonalRamp": ["#191915", "#34332d", "#4d4b42", "#666358", "#817e73", "#a19e93", "#c4c1b8", "#eceae4"] },
+      "soft-white": { "role": "neutral", "displayName": "Soft White", "canonical": "#efeee8", "tonalRamp": ["#25241f", "#3d3c35", "#57554d", "#747168", "#96938a", "#b9b6ad", "#d9d6cf", "#efeee8"] },
+      "secondary-stone": { "role": "neutral", "displayName": "Secondary Stone", "canonical": "#b4b1a7", "tonalRamp": ["#23221e", "#393832", "#514f47", "#6a685e", "#858278", "#a29f95", "#c2bfb6", "#e9e7e1"] },
+      "muted-stone": { "role": "neutral", "displayName": "Muted Stone", "canonical": "#918e84", "tonalRamp": ["#211f1c", "#36342f", "#4c4a43", "#626057", "#7a776e", "#97948a", "#bbb8af", "#e7e5df"] },
+      "quiet-rule": { "role": "neutral", "displayName": "Quiet Rule", "canonical": "#35342e", "tonalRamp": ["#191815", "#2c2b26", "#414039", "#59574e", "#737067", "#918e84", "#b8b4ac", "#e7e4de"] },
+      "strong-rule": { "role": "neutral", "displayName": "Strong Rule", "canonical": "#49483f", "tonalRamp": ["#1b1a17", "#302f29", "#46453d", "#5e5c52", "#78756b", "#969389", "#bbb8af", "#e8e6df"] },
+      "mineral-green": { "role": "primary", "displayName": "Mineral Green", "canonical": "#8fb59d", "tonalRamp": ["#142219", "#21382a", "#31513d", "#456b52", "#5f866b", "#7ca38a", "#a1c5ad", "#dce8df"] },
+      "mineral-green-bright": { "role": "primary", "displayName": "Bright Mineral Green", "canonical": "#b1d1bb", "tonalRamp": ["#17251b", "#263c2d", "#375640", "#4d7056", "#688c70", "#87aa91", "#accbb5", "#e2eee5"] },
+      "mineral-ink": { "role": "neutral", "displayName": "Mineral Ink", "canonical": "#0d1a12", "tonalRamp": ["#0d1a12", "#203328", "#354d3e", "#4c6855", "#668470", "#83a18d", "#a6c2af", "#dce9df"] },
+      "danger-coral": { "role": "secondary", "displayName": "Danger Coral", "canonical": "#e08a7d", "tonalRamp": ["#331914", "#54271f", "#76372d", "#984b3f", "#b96155", "#d77b6e", "#efa69b", "#f8ddd8"] },
+      "warning-ochre": { "role": "secondary", "displayName": "Warning Ochre", "canonical": "#d6aa68", "tonalRamp": ["#2c2010", "#49351a", "#674b25", "#866331", "#a57d41", "#c49957", "#ddb87c", "#f3dfbd"] }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Empty-state and authentication propositions." },
+      "headline": { "displayName": "Headline", "purpose": "Document section headings and major landmarks." },
+      "title": { "displayName": "Title", "purpose": "Panel, drawer, artifact, and subsection titles." },
+      "body": { "displayName": "Body", "purpose": "Assistant answers and descriptive interface prose." },
+      "label": { "displayName": "Label", "purpose": "Navigation, compact controls, and UI hierarchy." },
+      "technical": { "displayName": "Technical", "purpose": "Files, counts, shortcuts, indices, and metered data." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "state-fast", "value": "140ms cubic-bezier(.22,1,.36,1)", "purpose": "Color and background response on compact controls." },
+      { "name": "panel-standard", "value": "220ms cubic-bezier(.22,1,.36,1)", "purpose": "Side-panel width changes, drawers, and mobile sheets." },
+      { "name": "reduced-motion", "value": "0.01ms linear", "purpose": "Near-zero animation and transition duration when reduced motion is requested." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The single filled action treatment for sending, upgrading, and opening important work.",
+      "html": "<button class=\"ds-primary-action\">Choose plan</button>",
+      "css": ".ds-primary-action{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:40px;padding:0 16px;border:0;border-radius:6px;background:#8fb59d;color:#0d1a12;font-family:Manrope,ui-sans-serif,system-ui,sans-serif;font-size:12px;font-weight:700;cursor:pointer;transition:background 140ms cubic-bezier(.22,1,.36,1),transform 140ms cubic-bezier(.22,1,.36,1)}.ds-primary-action:hover{background:#b1d1bb}.ds-primary-action:active{transform:translateY(1px)}.ds-primary-action:focus-visible{outline:2px solid #b1d1bb;outline-offset:2px}.ds-primary-action:disabled{background:#24241f;color:#918e84;cursor:not-allowed;transform:none}"
+    },
+    {
+      "name": "Ghost Button",
+      "kind": "button",
+      "refersTo": "button-ghost",
+      "description": "A quiet text action for secondary commands inside rails, headers, and toolbars.",
+      "html": "<button class=\"ds-ghost-button\">New conversation</button>",
+      "css": ".ds-ghost-button{display:inline-flex;align-items:center;gap:8px;min-height:40px;padding:0 12px;border:0;border-radius:6px;background:transparent;color:#b4b1a7;font-family:Manrope,ui-sans-serif,system-ui,sans-serif;font-size:13px;font-weight:600;cursor:pointer;transition:color 140ms cubic-bezier(.22,1,.36,1),background 140ms cubic-bezier(.22,1,.36,1)}.ds-ghost-button:hover{background:#292923;color:#efeee8}.ds-ghost-button:focus-visible{outline:2px solid #b1d1bb;outline-offset:2px}"
+    },
+    {
+      "name": "Conversation Navigation Row",
+      "kind": "nav",
+      "description": "A full-width, line-free row whose selected state is carried by tone and a one-pixel leading marker.",
+      "html": "<button class=\"ds-nav-row ds-nav-row-active\"><span class=\"ds-nav-marker\"></span><span>Research current information</span></button>",
+      "css": ".ds-nav-row{position:relative;display:flex;align-items:center;width:100%;min-height:40px;padding:0 12px;border:0;background:transparent;color:#b4b1a7;font-family:Manrope,ui-sans-serif,system-ui,sans-serif;font-size:13px;font-weight:500;text-align:left;cursor:pointer;transition:color 140ms cubic-bezier(.22,1,.36,1),background 140ms cubic-bezier(.22,1,.36,1)}.ds-nav-row:hover{background:#1d1d19;color:#efeee8}.ds-nav-row-active{background:#24241f;color:#efeee8}.ds-nav-marker{position:absolute;left:0;top:8px;bottom:8px;width:1px;background:#8fb59d}.ds-nav-row:focus-visible{outline:2px solid #b1d1bb;outline-offset:-2px}"
+    },
+    {
+      "name": "Message Composer",
+      "kind": "input",
+      "refersTo": "composer",
+      "description": "A strong-rule rectangular writing surface with a divided action toolbar and embedded routing control.",
+      "html": "<div class=\"ds-composer\"><textarea aria-label=\"Message\" placeholder=\"Describe what you want to work on…\"></textarea><div class=\"ds-composer-tools\"><button>Auto</button><span>Enter to send</span><button class=\"ds-composer-send\">Send</button></div></div>",
+      "css": ".ds-composer{border:1px solid #49483f;background:#1d1d19;color:#efeee8;font-family:Manrope,ui-sans-serif,system-ui,sans-serif}.ds-composer:focus-within{border-color:#8fb59d}.ds-composer textarea{display:block;width:100%;min-height:56px;padding:16px;border:0;resize:none;background:transparent;color:#efeee8;font:400 14px/24px Manrope,ui-sans-serif,system-ui,sans-serif;outline:none}.ds-composer textarea::placeholder{color:#918e84}.ds-composer-tools{display:flex;align-items:center;gap:8px;padding:8px;border-top:1px solid #35342e;color:#918e84;font-size:10px}.ds-composer-tools button{min-height:36px;padding:0 12px;border:0;border-radius:6px;background:transparent;color:#b4b1a7;font-weight:600}.ds-composer-tools button:hover{background:#292923;color:#efeee8}.ds-composer-tools span{margin-left:auto;font-family:'DM Mono',ui-monospace,monospace}.ds-composer-tools .ds-composer-send{margin-left:8px;background:#8fb59d;color:#0d1a12}.ds-composer-tools button:focus-visible{outline:2px solid #b1d1bb;outline-offset:2px}"
+    },
+    {
+      "name": "Compact User Message",
+      "kind": "custom",
+      "refersTo": "message-user",
+      "description": "A bounded, right-aligned message that distinguishes user input without competing with the assistant document.",
+      "html": "<div class=\"ds-user-message\">Summarize the attached report and identify the decision points.</div>",
+      "css": ".ds-user-message{max-width:72%;margin-left:auto;padding:12px 16px;border:1px solid #49483f;background:#24241f;color:#efeee8;font:400 14px/24px Manrope,ui-sans-serif,system-ui,sans-serif}"
+    },
+    {
+      "name": "Assistant Document Header",
+      "kind": "custom",
+      "description": "The minimal authorship marker that introduces an unboxed, document-first assistant answer.",
+      "html": "<article class=\"ds-assistant\"><header><span></span><strong>CortexAI</strong></header><h2>Decision points</h2><p>The report concentrates risk in three operational choices.</p></article>",
+      "css": ".ds-assistant{color:#b4b1a7;font:400 15px/28px Manrope,ui-sans-serif,system-ui,sans-serif}.ds-assistant header{display:flex;align-items:center;gap:8px;margin-bottom:12px}.ds-assistant header span{width:6px;height:6px;background:#8fb59d}.ds-assistant header strong{color:#efeee8;font-size:12px;font-weight:600}.ds-assistant h2{margin:0 0 12px;color:#efeee8;font-size:20px;line-height:1.25;letter-spacing:-.02em}.ds-assistant p{margin:0;max-width:70ch}"
+    },
+    {
+      "name": "Artifact File Tab",
+      "kind": "custom",
+      "description": "A flat technical tab for the integrated Monaco artifact inspector.",
+      "html": "<button class=\"ds-file-tab ds-file-tab-active\">index.html</button>",
+      "css": ".ds-file-tab{position:relative;min-height:40px;padding:0 16px;border:0;border-right:1px solid #35342e;background:transparent;color:#918e84;font:400 10px/1.5 'DM Mono',ui-monospace,monospace;cursor:pointer}.ds-file-tab:hover{color:#b4b1a7}.ds-file-tab-active{background:#1d1d19;color:#efeee8}.ds-file-tab-active::after{content:'';position:absolute;left:12px;right:12px;bottom:0;height:1px;background:#8fb59d}.ds-file-tab:focus-visible{outline:2px solid #b1d1bb;outline-offset:-2px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Graphite Workbench",
+    "overview": "CortexAI is a warm, near-black operational workspace whose visual authority comes from precision rather than spectacle. The system behaves like a well-made technical workbench: three clear regions, durable rails, quiet one-pixel divisions, and a central document surface where the answer—not its container—holds attention.\n\nThe interface is compact but not cramped. Warm charcoal layers separate navigation, conversation, and artifact inspection while soft off-white type maintains a calm hierarchy. Mineral green is deliberately scarce and signals action, selection, focus, progress, or a live system state. It is never ambient decoration.\n\nAssistant responses are document-first: headings, paragraphs, lists, tables, code, links, and generated media form one readable column. User messages remain compact and clearly bounded. Motion is restrained to state feedback and panel transitions, with reduced-motion behavior built in.",
+    "keyCharacteristics": [
+      "Warm graphite surfaces with soft, low-chroma text.",
+      "Three-region desktop workspace: conversation rail, document column, artifact inspector.",
+      "Row and navigation structures instead of floating card grids.",
+      "One-pixel rules and square content containers; small radius only on controls.",
+      "Mineral green reserved for meaningful state and action.",
+      "Manrope for interface prose; DM Mono for technical and metered metadata."
+    ],
+    "rules": [
+      { "name": "The One Signal Rule", "body": "Mineral green communicates action, selection, focus, progress, or system presence; it never becomes a decorative wash.", "section": "colors" },
+      { "name": "The Warm Black Rule", "body": "Use the graphite neutral family instead of pure black for resting surfaces; reserve black overlays for modal scrims.", "section": "colors" },
+      { "name": "The Document Leads Rule", "body": "Assistant prose uses generous leading and semantic Markdown hierarchy; surrounding interface labels stay smaller and denser.", "section": "typography" },
+      { "name": "The Mono Means Data Rule", "body": "DM Mono identifies technical, metered, indexed, or file-specific information—not general interface copy.", "section": "typography" },
+      { "name": "The Rule Before Shadow Rule", "body": "Separate operational regions with tone and one-pixel borders; do not introduce card shadows or floating glass surfaces.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep the workspace centered on the conversation and the artifact being produced.",
+      "Do align the 820px document and composer columns so reading and prompting feel continuous.",
+      "Do use one-pixel rules, tonal layers, and full-width rows to organize dense operational content.",
+      "Do reserve mineral green for action, selection, focus, progress, links, and small live-state markers.",
+      "Do keep assistant answers document-first and user messages compact.",
+      "Do preserve visible keyboard focus, semantic dialogs, focus return, and reduced-motion behavior."
+    ],
+    "donts": [
+      "Don't introduce indigo or violet gradients, decorative glow, glassmorphism, or generic AI imagery.",
+      "Don't convert navigation, plan choices, starter actions, or assistant answers into floating rounded cards.",
+      "Don't use shadows where a tonal step and one-pixel rule communicate the structure.",
+      "Don't scatter mineral green across large backgrounds or decorative flourishes.",
+      "Don't use DM Mono for ordinary prose or large headings.",
+      "Don't detach generated code from the conversation; preserve the integrated inspector pattern."
+    ]
+  }
+}
